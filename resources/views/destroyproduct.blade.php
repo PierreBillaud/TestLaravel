@@ -66,6 +66,7 @@
         <h1>Here's a list of available products</h1>
         <table>
             <thead>
+            <td>id</td>
             <td>Name</td>
             <td>Description</td>
             <td>Count</td>
@@ -74,10 +75,12 @@
             <tbody>
             @foreach ($allProducts as $product)
                 <tr>
+                    <td>{{ $product->id }}</td>
                     <td>{{ $product->name }}</td>
                     <td class="inner-table">{{ $product->description }}</td>
                     <td class="inner-table">{{ $product->count }}</td>
                     <td class="inner-table">{{ $product->price }}</td>
+                   <td> <a href = '/products/delete/{{ $product->id }}'>Delete</a></td>
                     <td></td>
                 </tr>
             @endforeach

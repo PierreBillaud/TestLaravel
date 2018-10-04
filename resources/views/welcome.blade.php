@@ -71,6 +71,7 @@
             <div class="links">
                 <a href="{{ route('product-form') }}">Create Product</a>
                 <a href="{{ route('products') }}">View Products</a>
+                <a href="{{ route('product-table-delete') }}">Delete Products</a>
             </div>
         </div>
     </div>

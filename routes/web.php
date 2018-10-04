@@ -32,3 +32,7 @@ Route::get('/products/create')
 Route::get('/products/delete')
     ->uses('ProductController@destroy')
     ->name('product-table-delete');
+
+Route::get('/products/delete/{id}')
+    ->uses('ProductController@destroyItemTable')
+    ->name('product.table.delete');

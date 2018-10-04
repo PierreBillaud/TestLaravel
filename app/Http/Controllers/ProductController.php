@@ -91,4 +91,12 @@ class ProductController extends Controller
 
         return view('destroyproduct', ['allProducts' => $products]);
     }
+
+    public function destroyItemTable($id)
+    {
+      $chosenProduct = \App\Product::find($id);
+      $chosenProduct->delete();
+        return redirect('/products');
+    }
+
 }
